@@ -21,11 +21,10 @@ for (int j = 0; j < array.GetLength(1); j++)
     for (int i = 0; i < array.GetLength(0); i++)
     {
         sumOfColumns += array[i, j];
-        average[j] += array[i, j];
     }
-    average[j] = sumOfColumns / array.GetLength(0);
+    average[j] = Math.Round(sumOfColumns / array.GetLength(0), 1);
 }
-Console.WriteLine($"Среднее арифметическое каждого столбца: {string.Join("; ", average):f1}");
+Console.WriteLine($"Среднее арифметическое каждого столбца: {string.Join("; ", average)}");
 
 
 
